@@ -70,7 +70,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                ecgm.snakeandladder.snakeandladder/ecgm.snakeandladder.snakeandladder.HelloApplication
+                                ecgm.snakeandladder.snakeandladder/ecgm.snakeandladder.snakeandladder.Main
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
