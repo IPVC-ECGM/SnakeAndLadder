@@ -21,7 +21,14 @@ import javafx.util.Duration;
 import java.io.IOException;
 
 public class Game extends Application {
+    //Variáveis do Tabuleiro
+    public static final int Square_Size = 80;
+    public static final int width = 10;
+    public static final int height = 10;
+    public static final int but_area = 80;
 
+    //Variável responsevel por guardar cada Quadradinho nesse grupo
+    private Group SquareGroup = new Group();
     }
 
 
