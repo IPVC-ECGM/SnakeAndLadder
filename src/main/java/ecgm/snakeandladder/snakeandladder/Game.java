@@ -29,6 +29,26 @@ public class Game extends Application {
 
     //Variável responsevel por guardar cada Quadradinho nesse grupo
     private Group SquareGroup = new Group();
+
+    private Parent createContent() {
+        Pane root = new Pane();
+        root.setPrefSize(width * Square_Size, (height * Square_Size) + but_area); //+80 porque vamos adicionar os botões no fundo
+        root.getChildren().addAll(SquareGroup);
+
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < width; j++) {
+                //Vamos usar a classe board para construir o tabuleiro
+                Board board = new Board(Square_Size, Square_Size);
+                board.setTranslateX(j * Square_Size);
+                board.setTranslateY(i * Square_Size);
+                SquareGroup.getChildren().add(board);
+
+                //Obstaculo
+                //playerPos[i][j] = j * (Square_Size - 40);
+            }
+        }
+        SquareGroup.getChildren().addAll(player1, player2, button1, button2, gameButton, randomResult);
+        return root;
     }
 
 
